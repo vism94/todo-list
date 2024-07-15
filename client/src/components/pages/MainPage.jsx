@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/esm/Row';
 import axiosInstance from '../api/axiosInstance';
 import CardsWrapper from '../ui/CardsWrapper';
 
-export default function MainPage({ user }) {
+export default function MainPage({}) {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function MainPage({ user }) {
   return (
     <Col>
       <Row>
-        <CardsWrapper cards={cards} user={user} />
+        <CardsWrapper cards={cards} />
       </Row>
     </Col>
   );

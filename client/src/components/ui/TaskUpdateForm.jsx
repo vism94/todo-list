@@ -1,9 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-export default function TaskForm({ cardSubmitHandler }) {
+export default function TaskUpdateForm({ cardSubmitUpdateHandler, card }) {
   return (
-    <Form onSubmit={cardSubmitHandler}>
+    <Form onSubmit={(e) => cardSubmitUpdateHandler(e, card.id)}>
       <Form.Group className="mb-3" controlId="formTitle">
         <Form.Label>Task</Form.Label>
         <Form.Control name="title" type="text" placeholder="Enter title" />
